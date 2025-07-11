@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Issue a Book</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Issue</button>
+</form>
+
+<h3>Currently Issued Books</h3>
+
+{% if issued_transactions %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Book</th>
+            <th>Issued To</th>
+            <th>Issue Date</th>
+            <th>Return</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for t in issued_transactions %}
+        <tr>
+            <td>{{ t.book.title }}</td>
+            <td>{{ t.member.name }}</td>
+            <td>{{ t.issue_date }}</td>
+            <td>
+                <a href="{% url 'return_book' t.id %}" class="btn btn-sm btn-warning">Return</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+    <p>No books currently issued.</p>
+{% endif %}
+{% endblock %}

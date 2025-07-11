@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Import Books from API </h2>
+<form method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label>Title Filter</label>
+        <input type="text" name="title" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label>How many books to import?</label>
+        <input type="number" name="count" class="form-control" value="10">
+    </div>
+    <button type="submit" class="btn btn-info">Import</button>
+</form>
+{% endblock %}

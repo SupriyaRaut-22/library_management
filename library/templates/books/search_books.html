@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Search Books</h2>
+<form method="get" class="row g-3 mb-4">
+    <div class="col-md-6">
+        <label for="title" class="form-label">Book Title</label>
+        <input type="text" class="form-control" name="title" id="title" value="{{ request.GET.title }}">
+    </div>
+    <div class="col-md-6">
+        <label for="author" class="form-label">Author</label>
+        <input type="text" class="form-control" name="author" id="author" value="{{ request.GET.author }}">
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+</form>
+{% if books %}
+<h4>Search Results</h4>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for book in books %}
+        <tr>
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+            <td>{{ book.stock }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>No books found.</p>
+{% endif %}
+{% endblock %}
