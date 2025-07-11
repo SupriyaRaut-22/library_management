@@ -25,7 +25,7 @@ It helps librarians manage books, members, book issues/returns, and track outsta
 ### Book List with CRUD
 ![Book List](screenshots/book_list.png)
 
-### Members List
+### Members List with CRUD
 ![Member List](screenshots/member_list.png)
 
 ### Issue and Return Book
@@ -48,4 +48,12 @@ It helps librarians manage books, members, book issues/returns, and track outsta
 ### Prerequisites
 - Python 3.11+
 - pip
+
+### Database Setup
+- python manage.py makemigrations
+- python manage.py migrate
+
+### Runserver
+- python manage.py runserver
+
 
