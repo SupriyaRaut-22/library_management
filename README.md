@@ -22,10 +22,10 @@ It helps librarians manage books, members, book issues/returns, and track outsta
 ## Book List and CRUD
 ![Book List](screenshots/Book%20list%20and%20CRUD%20operations.PNG)
 
-## Member List
+## Member List and CRUD
 ![Member List](screenshots/Member%20list%20and%20CRUD%20operations.PNG)
 
-## Import Books
+## Import Books from API
 ![Import](screenshots/Import%20books%20from%20API.PNG)
 
 ## Issue a Book
