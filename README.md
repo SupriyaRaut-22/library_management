@@ -16,20 +16,23 @@ It helps librarians manage books, members, book issues/returns, and track outsta
 -  Block issuing to members with debt over ₹500
 
 ---
+## Search Book
+![Search Book](screenshots/Search%20book.PNG)
 
-## Screenshots
+## Book List and CRUD
+![Book List](screenshots/Book%20list%20and%20CRUD%20operations.PNG)
 
-### Search Books
-![Search Books](screenshots/search_books.png)
+## Member List
+![Member List](screenshots/Member%20list%20and%20CRUD%20operations.PNG)
 
-### Book List with CRUD
-![Book List](screenshots/book_list.png)
+## Import Books
+![Import](screenshots/Import%20books%20from%20API.PNG)
 
-### Members List with CRUD
-![Member List](screenshots/member_list.png)
+## Issue a Book
+![Issue](screenshots/Issue%20a%20book.PNG)
 
-### Issue and Return Book
-![Issue Book](screenshots/issue_book.png)
+## Blocked Member Example
+![Blocked](screenshots/Debt%20more%20than%20500.PNG)
 
 ---
 
