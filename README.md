@@ -51,7 +51,9 @@ It helps librarians manage books, members, book issues/returns, and track outsta
 ### Prerequisites
 - Python 3.11+
 - pip
-
+- django
+- requests
+  
 ### Database Setup
 - python manage.py makemigrations
 - python manage.py migrate
